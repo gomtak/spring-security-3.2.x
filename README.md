@@ -3,3 +3,6 @@
  * JPA
  * jwt web token
  * oauth2
+ * mysql
+ * redis
+ * docker-compose

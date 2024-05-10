@@ -1,5 +1,7 @@
-package com.whoflex.security;
+package com.whoflex.security.jwt;
 
+import com.whoflex.security.CustomUserDetails;
+import com.whoflex.security.CustomUserDetailsService;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;

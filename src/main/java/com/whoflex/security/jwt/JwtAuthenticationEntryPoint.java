@@ -1,4 +1,4 @@
-package com.whoflex.security;
+package com.whoflex.security.jwt;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

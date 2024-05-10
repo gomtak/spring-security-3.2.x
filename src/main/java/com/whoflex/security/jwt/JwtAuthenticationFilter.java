@@ -1,6 +1,8 @@
-package com.whoflex.security;
+package com.whoflex.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.whoflex.security.Account;
+import com.whoflex.security.CustomUserDetails;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

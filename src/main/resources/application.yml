@@ -19,3 +19,7 @@ jwt:
   access-token: 1800
   # 60 * 60 * 24 * 7 : 7day
   refresh-token: 604800
+--- #oauth2
+authorizedRedirectUris:
+  http://localhost:3000/oauth/redirect,
+  https://www.xxxx.com/oauth/redirect

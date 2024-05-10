@@ -23,6 +23,6 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<Object> createUser(@RequestBody SignUpDto signUpDto) {
-        return ResponseEntity.ok(accountRepository.save(new Account(signUpDto.getName(), passwordEncoder.encode(signUpDto.getPassword()), signUpDto.getRoleType())));
+        return ResponseEntity.ok(accountRepository.save(new Account(signUpDto.getName(), passwordEncoder.encode(signUpDto.getPassword()), signUpDto.getRoleType(), null)));
     }
 }
