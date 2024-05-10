@@ -89,8 +89,7 @@ public class SecurityConfig {
         return new JwtAuthenticationFilter(authenticationManager(builder), jwtProcessor);
     }
 
-    private JwtAuthorizationFilter getAuthorizationFilter() throws Exception {
-        AuthenticationManagerBuilder builder = new AuthenticationManagerBuilder(objectPostProcessor);
+    private JwtAuthorizationFilter getAuthorizationFilter() {
         return new JwtAuthorizationFilter(jwtProcessor);
     }
 

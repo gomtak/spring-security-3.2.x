@@ -18,7 +18,6 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
     private final JwtProcessor jwtProcessor;
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.info("JwtAuthorizationFilter");
