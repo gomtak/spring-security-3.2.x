@@ -1,0 +1,21 @@
+--- #spring
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sample
+    username: admin
+    password: admin
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+--- #server
+server:
+  port: 8081
+--- #jwt
+jwt:
+  secret-key: WjI5dGRHRnJJRzFoYTJVZ1lTQmhkMlZ6YjIxbElHRndjQ0JtYjNJZ2MyVmpkWEpwZEhrPQ==
+  # 30 minutes duration by default: 30 minutes * 60 seconds
+  access-token: 1800
+  # 60 * 60 * 24 * 7 : 7day
+  refresh-token: 604800

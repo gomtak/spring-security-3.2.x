@@ -1,0 +1,38 @@
+###
+POST http://localhost:8081/login
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "user"
+}
+
+> {% client.global.set("auth", response.headers.valueOf("Authorization")); %}
+
+### ADMIN
+POST http://localhost:8081/users
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "password": "admin",
+  "roleType": "ADMIN"
+}
+
+### ADMIN
+POST http://localhost:8081/users
+Content-Type: application/json
+
+{
+  "name": "user",
+  "password": "user",
+  "roleType": "USER"
+}
+
+###
+GET http://localhost:8081/users
+Authorization: {{auth}}
+
+###
+GET http://localhost:8081/admin
+Authorization: {{auth}}
