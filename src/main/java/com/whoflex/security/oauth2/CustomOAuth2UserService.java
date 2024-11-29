@@ -51,9 +51,8 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
                         .orElseGet(() -> createAccount(userInfo, providerType));
 
         return CustomUserDetails.builder()
-                .password(null)
+                .name(account.getName())
                 .roleType(account.getRoleType())
-                .roleType(RoleType.USER)
                 .build();
     }
 
